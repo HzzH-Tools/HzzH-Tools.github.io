@@ -9,6 +9,10 @@ h2 {
     text-align: center
 }
 
+img {
+    filter: drop-shadow(10px 10px 10px #222);
+}
+
 body {
     -webkit-animation: colorchange 10s infinite; 
     animation: colorchange 10s infinite;
