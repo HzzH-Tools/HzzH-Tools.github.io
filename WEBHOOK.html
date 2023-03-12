@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webhook Spammer</title>
+    <title>Webhook Tools Online</title>
 	<link href="webhook-style.css" rel="stylesheet">
   </head>
   <body>
@@ -19,6 +19,20 @@
 	<button class="but" id="spammer" onclick="toggle()" value="OFF">Unlimeted Spam</button>
     <div class="alert">
 	<h2>Refresh to stop Spamming!</h2>
+	<h1>Webhook Deleter</h1>
+		    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <input type="url" name = "deleteurl" id="deleteurl" value="Input Webhook URL">
+      <button onclick="deletewebhook()">Click to delete</button>
+    <script>
+          function deletewebhook() {
+            console.log(document.getElementsByName('deleteurl'))
+            var deleteurl = document.getElementById("deleteurl").value;
+            $.ajax({
+              type: "DELETE",
+              url: deleteurl,
+            });
+          }
+    </script>
 	</center>
 </div>
   </body>
